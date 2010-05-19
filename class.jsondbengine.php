@@ -4,7 +4,7 @@
  * @params dsn, username, password
  * Class to connect to database via PDO and return results as JSON.
  */
-class jsondbengine extends PDO
+class jsondbengine// extends PDO
 {
   /* Private variables */
   private $mysqli;
@@ -23,7 +23,7 @@ class jsondbengine extends PDO
    */
   function __construct ($dsn, $user, $pass)
   {
-    parent::__construct($dsn, $user, $pass);
+    //parent::__construct($dsn, $user, $pass);
     $this->last_error = null;
     $this->mysqli = new mysqli($host, $user, $pass, $dbname);
     if (mysqli_connect_errno())
